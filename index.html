@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wep app</title>
+
+    <script src="jquery-1.6.4.min.js"></script>
+    <script src="jquery.mobile-1.0.min.js"></script>
+    <style>
+        *{                
+            margin:0;
+            padding:0;
+        }
+
+        .body{
+
+        }
+        .ui-loader{
+            height:200px;
+            display: none !important;
+        }
+        .header{
+            background: url(images/header_bg.png);
+            width: 100%;
+            height: 170px;
+            text-align: center;
+            position:relative; 
+           float: none;
+            
+        }
+        .LOGO{
+            background: url(images/LOGO.png);
+            background-size: 90px 90px;
+            height: 90px;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin:  auto;
+            top: 20px;
+            position: relative;
+            
+
+        }
+        .main{
+            overflow: hidden;   
+        }
+        .divider{
+            background: url(images/stripe_bg.png);
+            height: 10px;
+            position:relative; 
+            box-shadow:0px 4px 4px rgba(0,0,0,.4);
+            
+            
+        }
+        .ui-a{
+            float: left;
+            
+            width: 25%;
+            text-align: center;
+            
+        }
+
+        .ui-b{
+            float: left;
+            width: 25%;
+            text-align: center;
+        }
+         .ui-c{
+            float: left;
+             width: 25%;
+             text-align: center;
+        }
+        .ui-d{
+            float: left;
+            width: 25%;
+            text-align: center;
+            
+        }
+        .home{
+            color: aliceblue;
+            text-decoration: none;
+            font-family: Helvetica, Arial, sans-serif;
+            line-height: 70px;
+            font-size: 0.6em;
+            padding: 10px 15px;
+        }
+        .home:hover{
+            background-color: black;
+            border-radius: 5px 5px 5px 5px;
+        }
+        .home:active{
+            background-color: black;
+        }
+        .work{
+            color: aliceblue;
+            text-decoration: none;
+            font-family: Helvetica, Arial, sans-serif;
+            line-height: 70px;
+            font-size: 0.6em;
+            padding: 10px 15px;
+        }
+        .work:hover{
+            background-color: black;
+            border-radius: 5px 5px 5px 5px;
+        }
+        .contact{
+            color: aliceblue;
+            text-decoration: none;
+            font-family: Helvetica, Arial, sans-serif;
+            line-height: 70px;
+            font-size: 0.6em;
+            padding: 10px 15px;
+        }
+        .contact:hover{
+            background-color: black;
+            border-radius: 5px 5px 5px 5px;
+        }
+        .about{
+            color: aliceblue;
+            text-decoration: none;
+            font-family: Helvetica, Arial, sans-serif;
+            line-height: 70px;
+            font-size: 0.6em;
+            padding: 10px 15px;
+        }
+        .about:hover{
+            background-color: black;
+            border-radius: 5px 5px 5px 5px;
+        }
+        .news{
+            background: url(images/bg.png);
+            height: 100%;
+        }
+        .news_{
+            margin: 0 auto;
+            padding-top: 15px;
+            max-width: 360px;
+            width: 90%;
+            height: 100%;
+            
+
+        }
+        .news_1{
+            background: url(images/%E5%A4%B4%E5%83%8F.jpg);
+            height: 360px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            border-radius: 5px 5px 0 0;
+            
+        }
+        .news_a{
+            height: 90px;
+            background-color: #FFF;
+            border-radius: 0 0 5px 5px;
+            font-family: Helvetica,Arial,sans-serif;
+            color: #636363;
+            font-weight: normal;
+            line-height: 1.7em;
+            font-size: 0.8em;
+            text-align: justify;
+            padding: 10px;
+            box-shadow:0px 4px 4px rgba(0,0,0,.4);
+        }
+        .lo{
+            width: 35%;
+            height: 60px;
+            background-color: #cb5432;
+            position: relative;
+            top: 170px;
+            opacity: 0.9;
+            box-shadow:5px 5px 5px rgba(0,0,0,.5);
+            font-family: Helvetica,Arial,sans-serif;
+            text-align: center;
+            line-height: 60px;
+            color: aliceblue;
+        }
+        .news_2{
+            background: url(images/2.jpg);
+            height: 200px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            border-radius: 5px 5px 0 0;
+            margin-top: 35px;
+        }
+        .news_b{
+            height: 110px;
+            background-color: #FFF;
+            border-radius: 0 0 5px 5px;
+            font-family: Helvetica, Arial, sans-serif;
+            color: #636363;
+            font-weight: normal;
+            line-height: 1.7em;
+            font-size: 0.8em;
+            text-align: justify;
+            padding: 10px;
+            box-shadow:0px 4px 4px rgba(0,0,0,.4);
+        }
+        .lo2{
+            width: 35%;
+            height: 60px;
+            background-color: #cb5432;
+            position: relative;
+            top: 30px;
+            opacity: 0.9;
+            box-shadow:5px 5px 5px rgba(0,0,0,.5);
+            font-family: Helvetica,Arial,sans-serif;
+            text-align: center;
+            line-height: 60px;
+            color: aliceblue;
+        }
+        .footer{
+            background: url(images/header_bg.png);
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            position:relative; 
+            float: none;
+            margin-top: 35px;
+        }
+        .follow{
+            width: 100%;
+            line-height: 60px;
+            
+            
+        }
+        .followme{
+            color: #cb5432;
+            font-family: Helvetica, Arial, sans-serif;
+            line-height: 60px;
+            font-size: 0.8em;
+            float: left;
+            margin-left: 20px;
+        }
+        .lx{
+            padding-top: 60px;
+            height: 80px;
+        }
+        .ui-1{
+            float: left;
+            margin-left: 20px;
+        }
+        .ui-2{
+            float: left;
+            margin-left: 20px;
+        }
+        .ui-3{
+            float: left;
+            margin-left: 20px;
+        }
+        .ui-4{
+            float: left;
+            margin-left: 20px;
+        }
+        .text{
+            color: #cb5432;
+            font-family: Helvetica, Arial, sans-serif;
+            line-height: 20px;
+            font-size: 0.8em;
+            float: left;
+            margin-left: 20px;
+        }
+        .t1{
+            font-family: Helvetica, Arial, sans-serif;
+            color: darkgray;
+            font-weight: normal;
+            line-height: 1.7em;
+            font-size: 0.8em;
+            text-align: justify;
+            margin:20px;
+            padding-top: 20px;
+        }
+        .main2{
+            overflow: hidden;
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="LOGO"></div>
+        <div class="main"> 
+            <div class="ui-a"><a class="home" href="index.html">HOME</a></div>
+            <div class="ui-b"><a class="work" href="work.html">WORK</a></div>
+            <div class="ui-c"><a class="contact" href="index.html">CONTACT</a></div>
+            <div class="ui-d"><a class="about" href="index.html">ABOUT</a></div>   
+        </div>
+        <div class="divider"></div>
+    </div>
+    <div class="news">
+        <div class="news_">
+            
+            <div class="news_1">
+                <div class="lo">IllidanStormra</div>
+            </div>
+            <div class="news_a">Nam vestibulum, orci sit amet pellentesque molestie, tellus augue varius erat, a euismod augue arcu eu dui. Duis sollicitudin sapien a diam bibendum viverra. Donec congue iaculis porttitor.</div>
+            <div class="news_2">
+                <div class="lo2">    Nightmare</div>
+            </div>
+            <div class="news_b">Welcome to nightmare,Emerald nightmare team copy has been opened! Those who dare to challenge the seven evil creatures of the nightmare will receive a generous reward.To learn more about this team copy, you can view our preview article: Emerald nightmare team copy preview.</div>
+            
+        </div>
+        <div class="footer">
+            <div class="divider"></div>
+            <div class="follow">
+                <div class="followme">FOLLOW   ME ON</div>
+                <div class="lx">
+                    <div class="ui-1"><a class="lx1" href=""><img src="images/digg.png" alt="" height="55"></a></div>
+                    <div class="ui-2"><a class="lx2" href=""><img src="images/fb.png" alt="" height="55"></a></div>
+                    <div class="ui-3"><a class="lx3" href=""><img src="images/rss.png" alt="" height="55"></a></div>
+                    <div class="ui-4"><a class="lx4" href=""><img src="images/twitter.png" alt="" height="55"></a></div>
+                </div>
+                <div class="text">TEXT WIDGET</div>
+                <div class="t1">Dit augue est, elementum id commodo sit amet, pellentesque vel mi. Nulla eu ante id ligula posuere pellentesque. Vivamus rhoncus mattis tellus vitae pretium. Vestibulum ullamcorper congue nisl eget suscipit. Aenean feugiat odio a velit scelerisque consequat. Fusce congue ipsum quis felis condimentum auctor tincidunt erat scelerisque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam purus eros, consequat in blandit non, adipiscing ut ipsum. In eu diam lorem. </div>
+            </div>
+            <div class="main2"> 
+                <div class="ui-a"><a class="home" href="">HOME</a></div>
+                <div class="ui-b"><a class="work" href="work.html">WORK</a></div>
+                <div class="ui-c"><a class="contact" href="">CONTACT</a></div>
+                <div class="ui-d"><a class="about" href="">ABOUT</a>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
